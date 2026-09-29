@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-rag-evidence-retrieval"
+version = "0.1.0"
+description = "Evidence-linked graph retrieval with a reproducible multi-hop evaluation"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+benchmark = ["pyarrow>=18"]
+semantic = ["sentence-transformers>=3.0"]
+llm = ["litellm>=1.50"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

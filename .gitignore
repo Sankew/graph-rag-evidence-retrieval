@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+data/*.parquet
+results/*.csv
+results/*.json
+!results/fixed_*.json
+results/*.checkpoint.json

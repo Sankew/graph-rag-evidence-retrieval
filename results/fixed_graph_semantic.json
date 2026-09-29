@@ -1,0 +1,58 @@
+{
+  "configuration": {
+    "embedder": "sentence-transformer",
+    "model": "extractive-demo",
+    "graph": "cooccurrence",
+    "reranker": "lexical",
+    "top_k": 5,
+    "candidate_pool": 25,
+    "limit": null,
+    "price_date": "2026-09-27",
+    "content_sha256": "de652091b5d5210d7e53794f58822cb381bbff96c8576115b22318a9c3265cfa"
+  },
+  "manifest": {
+    "source": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/refs%2Fpr%2F9/distractor/validation-00000-of-00001.parquet",
+    "source_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "dataset_license": "CC BY-SA 4.0",
+    "selection": "SHA-256 question ID order, half bridge and half comparison",
+    "question_count": 150,
+    "document_count": 1481,
+    "question_ids_sha256": "7a06d9f36c593e48cecb6374359e564be5a7a49353084d6ba59b2cb26e3f4083"
+  },
+  "overall": {
+    "questions": 150,
+    "exact_match": 0.0,
+    "answer_f1": 0.05431762162277185,
+    "supporting_document_recall": 0.6833333333333333,
+    "supporting_document_all_hit": 0.4533333333333333,
+    "citation_precision": 0.6040268456375839,
+    "abstention_accuracy": 0.0,
+    "latency_p50_ms": 53.57616700348444,
+    "latency_p95_ms": 91.53374550369332,
+    "estimated_cost_usd": 0.0
+  },
+  "bridge": {
+    "questions": 75,
+    "exact_match": 0.0,
+    "answer_f1": 0.05216303929795079,
+    "supporting_document_recall": 0.6266666666666667,
+    "supporting_document_all_hit": 0.4,
+    "citation_precision": 0.6666666666666666,
+    "abstention_accuracy": 0.0,
+    "latency_p50_ms": 54.13224999210797,
+    "latency_p95_ms": 93.69934559945249,
+    "estimated_cost_usd": 0.0
+  },
+  "comparison": {
+    "questions": 75,
+    "exact_match": 0.0,
+    "answer_f1": 0.05647220394759291,
+    "supporting_document_recall": 0.74,
+    "supporting_document_all_hit": 0.5066666666666667,
+    "citation_precision": 0.5405405405405406,
+    "abstention_accuracy": 0.0,
+    "latency_p50_ms": 52.920540998457,
+    "latency_p95_ms": 81.29569199954858,
+    "estimated_cost_usd": 0.0
+  }
+}

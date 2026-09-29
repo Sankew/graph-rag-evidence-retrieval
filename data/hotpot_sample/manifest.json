@@ -1,0 +1,9 @@
+{
+  "source": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/refs%2Fpr%2F9/distractor/validation-00000-of-00001.parquet",
+  "source_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+  "dataset_license": "CC BY-SA 4.0",
+  "selection": "SHA-256 question ID order, half bridge and half comparison",
+  "question_count": 150,
+  "document_count": 1481,
+  "question_ids_sha256": "7a06d9f36c593e48cecb6374359e564be5a7a49353084d6ba59b2cb26e3f4083"
+}
