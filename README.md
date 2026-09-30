@@ -1,8 +1,10 @@
 # GraphRAG Evidence Retrieval
 
+[![Checks](https://github.com/Sankew/graph-rag-evidence-retrieval/actions/workflows/checks.yml/badge.svg)](https://github.com/Sankew/graph-rag-evidence-retrieval/actions/workflows/checks.yml)
+
 This project tests whether an evidence-linked entity graph helps retrieve both documents needed for multi-hop questions. A vector index supplies initial chunks. The graph links entities to source chunks, expands up to two hops, and merges the retrieved evidence within a fixed five-chunk context budget. Every returned relation points back to a source chunk. Access checks run before graph traversal and again against the current document ACL.
 
-The runnable service is local and in memory. It has no answer cache or model router. The co-occurrence graph is a transparent offline fixture; it is not a claim of production-grade knowledge graph extraction.
+The service runs locally and in memory. The co-occurrence graph is an offline fixture, not production knowledge-graph extraction.
 
 ```mermaid
 flowchart LR
@@ -64,8 +66,6 @@ The semantic model is named but its weights revision is not pinned or included i
 - `rag_graph.graph.EvidenceGraph` stores entity mentions and relations with source chunk IDs. `remove_chunk` invalidates stale edges after re-ingestion and advances the graph revision.
 - `rag_graph.graph_extraction` contains the co-occurrence fixture and an optional LiteLLM relation extractor constrained to a fixed predicate schema. Structured extraction has not been evaluated on this benchmark.
 - `rag_graph.service.GraphRAGService` combines vector and graph evidence, filters by current permissions, generates an answer, and rejects citations outside the authorized context.
-- The graph is in memory, has no Neo4j persistence, and uses heuristic entity linking. Both paired benchmarks were rerun in this standalone project with equal candidate ceilings and no graph slot reservation.
-
-The honest portfolio claim today is a **measured retrieval experiment with a documented failure mode**. A claim about improved multi-hop answer quality would require structured relations and a paired evaluation with a capable answer model.
+- The graph is in memory, has no Neo4j persistence, and uses heuristic entity linking.
 
 Related projects: [permission-aware multi-tenant RAG](https://github.com/Sankew/secure-multitenant-rag) and [answer caching and model routing](https://github.com/Sankew/rag-cache-model-routing).

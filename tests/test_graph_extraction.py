@@ -4,7 +4,6 @@ from rag_graph.graph_extraction import (
     ExtractedRelation,
     add_cooccurrence_evidence,
     add_extracted_relations,
-    candidate_entities,
     question_linker,
 )
 
